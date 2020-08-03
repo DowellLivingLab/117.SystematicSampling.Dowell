@@ -1,0 +1,14 @@
+def systematic_sample(N, n):
+  '''
+  Inputs:
+  N = The size of the popultation
+  n = The size of the sample
+
+  Returns:
+  A systematic sample
+  '''
+  import numpy as np
+  k = round(N / n)
+  r = np.random.choice(a = np.arange(1, k), size = 1)
+  systematic_sample = np.arange(r, (r + k*(n-1)), k)
+  return(systematic_sample)
